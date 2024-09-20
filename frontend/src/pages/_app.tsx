@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import WagmiProvider from "../utils/wagmiprovider";
+import Footer from "@/components/Footer";
 
 const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: false });
 
@@ -40,7 +41,8 @@ export default function App({ Component, pageProps }: AppProps) {
             }}
           >
             <Navbar />
-            <Component {...pageProps} />{" "}
+            <Component {...pageProps} />
+            <Footer />
           </div>
         </ChakraProvider>
       </WagmiProvider>
