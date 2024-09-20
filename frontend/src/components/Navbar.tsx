@@ -23,15 +23,15 @@ import {
   AddIcon,
   WarningTwoIcon,
 } from "@chakra-ui/icons";
-// import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Image from "next/image";
-// import { ethers } from "ethers";
+import { ethers } from "ethers";
 import { Link } from "@chakra-ui/next-js";
-// import { useAccount } from "wagmi";
+import { useAccount } from "wagmi";
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  //   const account = useAccount();
+  const account = useAccount();
 
   return (
     <>
@@ -69,107 +69,107 @@ export default function Navbar() {
           </HStack>
           <Flex alignItems={"center"}>
             <div style={{ display: "flex" }}>
-              {/* {account.isConnected && ( */}
-              <>
-                <HStack
-                  as={"nav"}
-                  spacing={4}
-                  display={{ base: "none", md: "flex" }}
-                  marginRight={4}
-                >
-                  <Link href="/register">
-                    <Button w="full" variant="ghost">
-                      Register
-                    </Button>
-                  </Link>
-                </HStack>
-                <HStack
-                  as={"nav"}
-                  spacing={4}
-                  display={{ base: "none", md: "flex" }}
-                  marginRight={4}
-                >
-                  <Link href="/create-dao">
-                    <Button w="full" variant="ghost">
-                      Create DAO
-                    </Button>
-                  </Link>
-                </HStack>
-                <HStack
-                  as={"nav"}
-                  spacing={4}
-                  display={{ base: "none", md: "flex" }}
-                  marginRight={4}
-                >
-                  <Link href="/explore">
-                    <Button w="full" variant="ghost">
-                      Explore
-                    </Button>
-                  </Link>
-                </HStack>
+              {account.isConnected && (
+                <>
+                  <HStack
+                    as={"nav"}
+                    spacing={4}
+                    display={{ base: "none", md: "flex" }}
+                    marginRight={4}
+                  >
+                    <Link href="/register">
+                      <Button w="full" variant="ghost">
+                        Register
+                      </Button>
+                    </Link>
+                  </HStack>
+                  <HStack
+                    as={"nav"}
+                    spacing={4}
+                    display={{ base: "none", md: "flex" }}
+                    marginRight={4}
+                  >
+                    <Link href="/create-dao">
+                      <Button w="full" variant="ghost">
+                        Create DAO
+                      </Button>
+                    </Link>
+                  </HStack>
+                  <HStack
+                    as={"nav"}
+                    spacing={4}
+                    display={{ base: "none", md: "flex" }}
+                    marginRight={4}
+                  >
+                    <Link href="/explore">
+                      <Button w="full" variant="ghost">
+                        Explore
+                      </Button>
+                    </Link>
+                  </HStack>
 
-                <HStack
-                  as={"nav"}
-                  spacing={4}
-                  display={{ base: "none", md: "flex" }}
-                  marginRight={4}
-                >
-                  <Link href="/profile">
-                    <Button w="full" variant="ghost">
-                      Profile
-                    </Button>
-                  </Link>
-                </HStack>
-              </>
-              {/* )} */}
+                  <HStack
+                    as={"nav"}
+                    spacing={4}
+                    display={{ base: "none", md: "flex" }}
+                    marginRight={4}
+                  >
+                    <Link href="/profile">
+                      <Button w="full" variant="ghost">
+                        Profile
+                      </Button>
+                    </Link>
+                  </HStack>
+                </>
+              )}
 
-              {/* <HStack>
+              <HStack>
                 <ConnectButton
                   accountStatus={{
                     smallScreen: "avatar",
                     largeScreen: "full",
                   }}
                 />
-              </HStack> */}
+              </HStack>
             </div>
           </Flex>
         </Flex>
 
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
-            {/* {account.isConnected && ( */}
-            <>
-              <Stack as={"nav"} spacing={4}>
-                <Link href="/register">
-                  <Button w="full" variant="ghost">
-                    Register
-                  </Button>
-                </Link>
-              </Stack>
-              <Stack as={"nav"} spacing={4}>
-                <Link href="/create-dao">
-                  <Button w="full" variant="ghost">
-                    Create DAO
-                  </Button>
-                </Link>
-              </Stack>
-              <Stack as={"nav"} spacing={4}>
-                <Link href="/explore">
-                  <Button w="full" variant="ghost">
-                    Explore
-                  </Button>
-                </Link>
-              </Stack>
+            {account.isConnected && (
+              <>
+                <Stack as={"nav"} spacing={4}>
+                  <Link href="/register">
+                    <Button w="full" variant="ghost">
+                      Register
+                    </Button>
+                  </Link>
+                </Stack>
+                <Stack as={"nav"} spacing={4}>
+                  <Link href="/create-dao">
+                    <Button w="full" variant="ghost">
+                      Create DAO
+                    </Button>
+                  </Link>
+                </Stack>
+                <Stack as={"nav"} spacing={4}>
+                  <Link href="/explore">
+                    <Button w="full" variant="ghost">
+                      Explore
+                    </Button>
+                  </Link>
+                </Stack>
 
-              <Stack as={"nav"} spacing={4}>
-                <Link href="/profile">
-                  <Button w="full" variant="ghost">
-                    Profile
-                  </Button>
-                </Link>
-              </Stack>
-            </>
-            {/* )} */}
+                <Stack as={"nav"} spacing={4}>
+                  <Link href="/profile">
+                    <Button w="full" variant="ghost">
+                      Profile
+                    </Button>
+                  </Link>
+                </Stack>
+              </>
+            )}
           </Box>
         ) : null}
       </Box>

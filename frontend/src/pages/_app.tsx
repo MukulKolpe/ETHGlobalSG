@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
+import WagmiProvider from "../utils/wagmiprovider";
 
 const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: false });
 
@@ -29,18 +30,20 @@ const theme = extendTheme({ colors, config });
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ChakraProvider theme={theme}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            minHeight: "100vh",
-          }}
-        >
-          <Navbar />
-          <Component {...pageProps} />{" "}
-        </div>
-      </ChakraProvider>
+      <WagmiProvider>
+        <ChakraProvider theme={theme}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              minHeight: "100vh",
+            }}
+          >
+            <Navbar />
+            <Component {...pageProps} />{" "}
+          </div>
+        </ChakraProvider>
+      </WagmiProvider>
     </>
   );
 }
