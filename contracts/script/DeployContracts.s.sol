@@ -5,7 +5,7 @@ pragma solidity 0.8.26;
 import {Script} from "forge-std/Script.sol";
 import {GovernanceToken} from "../src/GovernanceToken.sol";
 import {CreateGovernanceToken} from "../src/CreateGovernanceToken.sol";
-import {UserSide} from "../src/UserSide.sol";
+import {DAOManager} from "../src/DAOManager.sol";
 
 contract DeployContracts is Script {
     uint256 public constant INITIAL_SUPPLY = 1000000 ether;
@@ -14,7 +14,7 @@ contract DeployContracts is Script {
 
     function run()
         external
-        returns (GovernanceToken, CreateGovernanceToken, UserSide)
+        returns (GovernanceToken, CreateGovernanceToken, DAOManager)
     {
         vm.startBroadcast();
         GovernanceToken governanceToken = new GovernanceToken(
@@ -23,8 +23,8 @@ contract DeployContracts is Script {
             INITIAL_SUPPLY
         );
         CreateGovernanceToken createGovernanceToken = new CreateGovernanceToken();
-        UserSide userSide = new UserSide();
+        DAOManager daoManager = new DAOManager();
         vm.stopBroadcast();
-        return (governanceToken, createGovernanceToken, userSide);
+        return (governanceToken, createGovernanceToken, daoManager);
     }
 }
