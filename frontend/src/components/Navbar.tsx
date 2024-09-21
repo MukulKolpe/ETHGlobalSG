@@ -66,7 +66,7 @@ export default function Navbar() {
                 width={170}
                 height={300}
               /> */}
-              ETHGlobal SG
+              DAOTown
             </Link>
           </HStack>
           <Flex alignItems={"center"}>
