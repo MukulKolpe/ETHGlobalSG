@@ -1,51 +1,19 @@
-// @ts-nocheck comment
 import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import { useAccount } from "wagmi";
 import daomanagerabi from "../../utils/abis/daomanagerabi.json";
 import governancetokenabi from "../../utils/abis/governancetokenabi.json";
 import {
-  Progress,
   Box,
-  ButtonGroup,
-  Button,
-  Heading,
-  Flex,
-  FormControl,
-  GridItem,
-  FormLabel,
-  Input,
-  Select,
-  SimpleGrid,
-  InputLeftAddon,
-  InputGroup,
-  Textarea,
-  FormHelperText,
-  InputRightElement,
-  NumberInput,
-  NumberInputField,
-  NumberInputStepper,
-  NumberIncrementStepper,
-  NumberDecrementStepper,
-  Icon,
-  chakra,
-  VisuallyHidden,
-  Text,
-  Stack,
-  ring,
-  Badge,
-  Code,
-  Center,
-  Grid,
   Container,
+  GridItem,
   AbsoluteCenter,
+  Spinner,
 } from "@chakra-ui/react";
 import DaosCard from "../../components/DaosCard/DaosCard";
-import { Spinner } from "@chakra-ui/react";
 
 const Explore = () => {
   const [daos, setDaos] = useState([]);
-  const [totaluserDAO, setTotaluserDAO] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
   const onLoad = async () => {
@@ -58,48 +26,40 @@ const Explore = () => {
         signer
       );
       const tempTotalDaos = Number(await userSideInstance.totalDaos());
-      let tempCreatorId,
-        tempDaoInfo,
-        tempCreatorInfo,
-        tempTokenAddress,
-        tempTokenName,
-        tempTokenSymbol;
+      let tempDaos = [];
+
       for (let i = 1; i <= tempTotalDaos; i++) {
-        tempDaoInfo = await userSideInstance.daoIdtoDao(i);
-        tempCreatorId = Number(tempDaoInfo.creator);
-        console.log("Creator Id: " + tempCreatorId);
-        tempCreatorInfo = await userSideInstance.userIdtoUser(tempCreatorId);
-        console.log(tempCreatorInfo);
-        tempTokenAddress = tempDaoInfo.governanceTokenAddress;
-        console.log("TokenAddress: " + tempTokenAddress);
+        const tempDaoInfo = await userSideInstance.daoIdtoDao(i);
+        const tempCreatorId = Number(tempDaoInfo.creator);
+        const tempCreatorInfo = await userSideInstance.userIdtoUser(
+          tempCreatorId
+        );
+        const tempTokenAddress = tempDaoInfo.governanceTokenAddress;
+
         const governanceTokenInstance = new ethers.Contract(
           tempTokenAddress,
           governancetokenabi,
           signer
         );
-        console.log(governanceTokenInstance);
-        tempTokenName = await governanceTokenInstance.name();
-        console.log("Token Name: " + tempTokenName);
-        tempTokenSymbol = await governanceTokenInstance.symbol();
-        console.log("Token Symbol: " + tempTokenSymbol);
-        setDaos((daos) => [
-          ...daos,
-          {
-            daoInfo: tempDaoInfo,
-            creatorInfo: tempCreatorInfo,
-            tokenName: tempTokenName,
-            tokenSymbol: tempTokenSymbol,
-          },
-        ]);
+
+        const tempTokenName = await governanceTokenInstance.name();
+        const tempTokenSymbol = await governanceTokenInstance.symbol();
+
+        const totalDaoMembers = await userSideInstance.getAllDaoMembers(
+          tempDaoInfo.daoId
+        );
+
+        tempDaos.push({
+          daoInfo: tempDaoInfo,
+          creatorInfo: tempCreatorInfo,
+          tokenName: tempTokenName,
+          tokenSymbol: tempTokenSymbol,
+          totalDaoMembers: totalDaoMembers.length,
+        });
       }
 
-      console.log(tempDaoInfo);
-      const totalUsersDAO = await userSideInstance.getAllDaoMembers(
-        tempDaoInfo.daoId
-      );
-      setTotaluserDAO(totalUsersDAO.length);
+      setDaos(tempDaos);
       setIsLoading(false);
-      console.log("This is: " + totalUsersDAO.length);
     }
   };
 
@@ -112,7 +72,6 @@ const Explore = () => {
       {isLoading ? (
         <>
           <AbsoluteCenter>
-            {/* <Box display="flex" flexDirection="column"> */}
             <Spinner
               thickness="4px"
               speed="0.65s"
@@ -120,8 +79,6 @@ const Explore = () => {
               color="orange.500"
               size="xl"
             />
-
-            {/* </Box> */}
           </AbsoluteCenter>
           <AbsoluteCenter style={{ marginTop: "60px", whiteSpace: "nowrap" }}>
             <h2>Loading Public DAOs</h2>
@@ -139,14 +96,14 @@ const Explore = () => {
             daos
               .filter((dao) => dao.daoInfo.isPrivate === false)
               .map((dao) => (
-                <GridItem rowSpan={1}>
+                <GridItem key={dao.daoInfo.daoId} rowSpan={1}>
                   <DaosCard
                     daoName={dao.daoInfo.daoName}
                     joiningThreshold={dao.daoInfo.joiningThreshold}
                     creatorName={dao.creatorInfo.userName}
                     tokenName={dao.tokenName}
                     tokenSymbol={dao.tokenSymbol}
-                    totalDaoMember={totaluserDAO}
+                    totalDaoMember={dao.totalDaoMembers}
                     daoId={dao.daoInfo.daoId}
                     channel={dao.daoInfo.discordID}
                   />
