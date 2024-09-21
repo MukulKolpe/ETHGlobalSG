@@ -19,3 +19,6 @@ deployments/localhost
 zkeys
 coordinatorKeyPair.json
 contractAddresses.json
+
+proof
+tally.json

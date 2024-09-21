@@ -15,6 +15,8 @@ import "hardhat-deploy";
 import "hardhat-deploy-ethers";
 import "hardhat-artifactor";
 import { task, subtask } from "hardhat/config";
+import "maci-contracts/tasks/runner/merge";
+import "maci-contracts/tasks/runner/prove";
 
 /**
  * Allow to copy a directory from source to target
@@ -80,7 +82,7 @@ const config: HardhatUserConfig = {
       optimizer: {
         enabled: true,
         // https://docs.soliditylang.org/en/latest/using-the-compiler.html#optimizer-options
-        runs: 1,
+        runs: 200,
       },
       viaIR: true,
     },
@@ -101,7 +103,6 @@ const config: HardhatUserConfig = {
       //   enabled: process.env.MAINNET_FORKING_ENABLED === "true",
       // },
       loggingEnabled: false,
-      allowUnlimitedContractSize: true,
     },
     mainnet: {
       url: `https://eth-mainnet.alchemyapi.io/v2/${providerApiKey}`,
@@ -175,10 +176,9 @@ const config: HardhatUserConfig = {
       url: "https://sepolia.publicgoods.network",
       accounts: [deployerPrivateKey],
     },
-    airdao: {
+    airDAO: {
       url: "https://network.ambrosus-test.io",
       accounts: [deployerPrivateKey],
-      allowUnlimitedContractSize: true,
     },
   },
   // configuration for harhdat-verify plugin

@@ -7,7 +7,7 @@ import fs from "fs";
 const deployContracts: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await hre.getNamedAccounts();
 
-  const maci = await hre.ethers.getContract<MACIWrapper>("DAOManager", deployer);
+  const maci = await hre.ethers.getContract<MACIWrapper>("MACIWrapper", deployer);
   const initialVoiceCreditProxy = await hre.ethers.getContract(InitialVoiceCreditProxyContractName, deployer);
   const gatekeeper = await hre.ethers.getContract(GatekeeperContractName, deployer);
   const verifier = await hre.ethers.getContract("Verifier", deployer);
