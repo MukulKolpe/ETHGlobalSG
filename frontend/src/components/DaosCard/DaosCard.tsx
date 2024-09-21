@@ -30,6 +30,7 @@ import daomanagerabi from "../../utils/abis/daomanagerabi.json";
 import { ethers } from "ethers";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
+import { desc } from "framer-motion/client";
 
 const DaosCard = ({
   daoName,
@@ -48,6 +49,8 @@ const DaosCard = ({
   console.log(avatar, "avatar");
   const userId = avatar?.split("/")[4];
   console.log(userId);
+  console.log(totalDaoMember, "totalDaoMember");
+  console.log(channel, "channel");
 
   const joinDiscord = async ({ userId, channelId }) => {
     try {
@@ -69,7 +72,8 @@ const DaosCard = ({
       });
       toast({
         title: "Thank you for joining DAO",
-        status: "You have been added to the private DAO Discord channel",
+        description: "You have been added to the private DAO Discord channel",
+        status: "info",
         duration: 5000,
         isClosable: true,
       });
