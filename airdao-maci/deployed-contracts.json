@@ -1,0 +1,548 @@
+{
+  "localhost": {
+    "instance": {
+      "0x5FbDB2315678afecb367f032d93F642f64180aa3": {
+        "id": "ConstantInitialVoiceCreditProxy",
+        "verify": {
+          "args": "[\"99\"]"
+        }
+      },
+      "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512": {
+        "id": "FreeForAllGatekeeper",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0": {
+        "id": "Verifier",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9": {
+        "id": "PoseidonT3",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9": {
+        "id": "PoseidonT4",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707": {
+        "id": "PoseidonT5",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x0165878A594ca255338adfa4d48449f69242Eb8F": {
+        "id": "PoseidonT6",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853": {
+        "id": "PollFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6": {
+        "id": "MessageProcessorFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318": {
+        "id": "TallyFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x610178dA211FEF7D417bC0e6FeD39F05609AD788": {
+        "id": "MACI",
+        "verify": {
+          "args": "[\"0xa513E6E4b8f2a923D98304ec87F64353C4D5C853\",\"0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6\",\"0x8A791620dd6260079BF849Dc5567aDC3F2FdC318\",\"0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512\",\"0x5FbDB2315678afecb367f032d93F642f64180aa3\",10,[\"16015576667038038422103932363190100635991292382181099511410843174865570503661\",\"166510078825589460025300915201657086611944528317298994959376081297530246971\",\"10057734083972610459557695472359628128485394923403014377687504571662791937025\",\"4904828619307091008204672239231377290495002626534171783829482835985709082773\",\"18694062287284245784028624966421731916526814537891066525886866373016385890569\"]]"
+        }
+      },
+      "0xA51c1fc2f0D1a1b8494Ed1FE312d7C3a78Ed91C0": {
+        "id": "VkRegistry",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x9A9f2CCfdE556A7E9Ff0848998Aa4a0CFD8863AE": {
+        "id": "ConstantInitialVoiceCreditProxy",
+        "verify": {
+          "args": "[\"99\"]"
+        }
+      },
+      "0x68B1D87F95878fE05B998F19b66F4baba5De1aed": {
+        "id": "FreeForAllGatekeeper",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x3Aa5ebB10DC797CAC828524e59A333d0A371443c": {
+        "id": "MACI",
+        "verify": {
+          "args": "[\"0xa513E6E4b8f2a923D98304ec87F64353C4D5C853\",\"0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6\",\"0x8A791620dd6260079BF849Dc5567aDC3F2FdC318\",\"0x68B1D87F95878fE05B998F19b66F4baba5De1aed\",\"0x9A9f2CCfdE556A7E9Ff0848998Aa4a0CFD8863AE\",10,[\"16015576667038038422103932363190100635991292382181099511410843174865570503661\",\"166510078825589460025300915201657086611944528317298994959376081297530246971\",\"10057734083972610459557695472359628128485394923403014377687504571662791937025\",\"4904828619307091008204672239231377290495002626534171783829482835985709082773\",\"18694062287284245784028624966421731916526814537891066525886866373016385890569\"]]"
+        }
+      },
+      "0x09635F643e140090A9A8Dcd712eD6285858ceBef": {
+        "id": "ConstantInitialVoiceCreditProxy",
+        "verify": {
+          "args": "[\"99\"]"
+        }
+      },
+      "0xc5a5C42992dECbae36851359345FE25997F5C42d": {
+        "id": "FreeForAllGatekeeper",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x67d269191c92Caf3cD7723F116c85e6E9bf55933": {
+        "id": "Verifier",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xE6E340D132b5f46d1e472DebcD681B2aBc16e57E": {
+        "id": "PoseidonT3",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xc3e53F4d16Ae77Db1c982e75a937B9f60FE63690": {
+        "id": "PoseidonT4",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x84eA74d481Ee0A5332c457a4d796187F6Ba67fEB": {
+        "id": "PoseidonT5",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x9E545E3C0baAB3E08CdfD552C960A1050f373042": {
+        "id": "PoseidonT6",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xa82fF9aFd8f496c3d6ac40E2a0F282E47488CFc9": {
+        "id": "PollFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x1613beB3B2C4f22Ee086B2b38C1476A3cE7f78E8": {
+        "id": "MessageProcessorFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x851356ae760d987E095750cCeb3bC6014560891C": {
+        "id": "TallyFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xf5059a5D33d5853360D16C683c16e67980206f36": {
+        "id": "MACI",
+        "verify": {
+          "args": "[\"0xa82fF9aFd8f496c3d6ac40E2a0F282E47488CFc9\",\"0x1613beB3B2C4f22Ee086B2b38C1476A3cE7f78E8\",\"0x851356ae760d987E095750cCeb3bC6014560891C\",\"0xc5a5C42992dECbae36851359345FE25997F5C42d\",\"0x09635F643e140090A9A8Dcd712eD6285858ceBef\",10,[\"16015576667038038422103932363190100635991292382181099511410843174865570503661\",\"166510078825589460025300915201657086611944528317298994959376081297530246971\",\"10057734083972610459557695472359628128485394923403014377687504571662791937025\",\"4904828619307091008204672239231377290495002626534171783829482835985709082773\",\"18694062287284245784028624966421731916526814537891066525886866373016385890569\"]]"
+        }
+      },
+      "0x998abeb3E57409262aE5b751f60747921B33613E": {
+        "id": "VkRegistry",
+        "verify": {
+          "args": "[]"
+        }
+      }
+    },
+    "named": {
+      "ConstantInitialVoiceCreditProxy": {
+        "address": "0x09635F643e140090A9A8Dcd712eD6285858ceBef",
+        "count": 5
+      },
+      "FreeForAllGatekeeper": {
+        "address": "0xc5a5C42992dECbae36851359345FE25997F5C42d",
+        "count": 5
+      },
+      "Verifier": {
+        "address": "0x67d269191c92Caf3cD7723F116c85e6E9bf55933",
+        "count": 5
+      },
+      "PoseidonT3": {
+        "address": "0xE6E340D132b5f46d1e472DebcD681B2aBc16e57E",
+        "count": 5
+      },
+      "PoseidonT4": {
+        "address": "0xc3e53F4d16Ae77Db1c982e75a937B9f60FE63690",
+        "count": 5
+      },
+      "PoseidonT5": {
+        "address": "0x84eA74d481Ee0A5332c457a4d796187F6Ba67fEB",
+        "count": 5
+      },
+      "PoseidonT6": {
+        "address": "0x9E545E3C0baAB3E08CdfD552C960A1050f373042",
+        "count": 5
+      },
+      "PollFactory": {
+        "address": "0xa82fF9aFd8f496c3d6ac40E2a0F282E47488CFc9",
+        "count": 5
+      },
+      "MessageProcessorFactory": {
+        "address": "0x1613beB3B2C4f22Ee086B2b38C1476A3cE7f78E8",
+        "count": 5
+      },
+      "TallyFactory": {
+        "address": "0x851356ae760d987E095750cCeb3bC6014560891C",
+        "count": 5
+      },
+      "MACI": {
+        "address": "0xf5059a5D33d5853360D16C683c16e67980206f36",
+        "count": 5
+      },
+      "VkRegistry": {
+        "address": "0x998abeb3E57409262aE5b751f60747921B33613E",
+        "count": 3
+      }
+    }
+  },
+  "airDAO": {
+    "instance": {
+      "0x3De2a008150B518b737559406a8FB7395490194b": {
+        "id": "ConstantInitialVoiceCreditProxy",
+        "verify": {
+          "args": "[\"99\"]"
+        }
+      },
+      "0xe16C540EF22954337454BAaAfe3688204Fac504C": {
+        "id": "FreeForAllGatekeeper",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xf50a2dBdd4784B6567F529d8CC0daB9d2A050EC2": {
+        "id": "Verifier",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xcDaBf1ed4DEaA70521567549f11DbD8eF6E13286": {
+        "id": "PoseidonT3",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xfC85fFaFd836f523Dc2D4fb09455517e298B2541": {
+        "id": "PoseidonT4",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x3B0b878ECBEA337663F516B2c7bf86a9Ab6A7077": {
+        "id": "PoseidonT5",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x846c94871112d5Cbd2f8b4273F98d17322AaF83e": {
+        "id": "PoseidonT6",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x57AE3CEA246145FBE327965185207A52541E3924": {
+        "id": "PollFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xcD776916C9B759B9E3Dc25B0C8C321fFf84dEe29": {
+        "id": "MessageProcessorFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xd295FF76589187cDC9752a493F821eE6C47C4a3f": {
+        "id": "TallyFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x6edC149dA24e24214933805B800713F31d98E214": {
+        "id": "MACI",
+        "verify": {
+          "args": "[\"0x57AE3CEA246145FBE327965185207A52541E3924\",\"0xcD776916C9B759B9E3Dc25B0C8C321fFf84dEe29\",\"0xd295FF76589187cDC9752a493F821eE6C47C4a3f\",\"0xe16C540EF22954337454BAaAfe3688204Fac504C\",\"0x3De2a008150B518b737559406a8FB7395490194b\",10,[\"16015576667038038422103932363190100635991292382181099511410843174865570503661\",\"166510078825589460025300915201657086611944528317298994959376081297530246971\",\"10057734083972610459557695472359628128485394923403014377687504571662791937025\",\"4904828619307091008204672239231377290495002626534171783829482835985709082773\",\"18694062287284245784028624966421731916526814537891066525886866373016385890569\"]]"
+        }
+      },
+      "0x20601b89cEC11bBF44Bb2b57Ca971bf8757B46E1": {
+        "id": "VkRegistry",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x4229F418325d13eF2B9eB95337346563007a49F3": {
+        "id": "MACI",
+        "verify": {
+          "args": "[\"0x57AE3CEA246145FBE327965185207A52541E3924\",\"0xcD776916C9B759B9E3Dc25B0C8C321fFf84dEe29\",\"0xd295FF76589187cDC9752a493F821eE6C47C4a3f\",\"0xe16C540EF22954337454BAaAfe3688204Fac504C\",\"0x3De2a008150B518b737559406a8FB7395490194b\",10,[\"16015576667038038422103932363190100635991292382181099511410843174865570503661\",\"166510078825589460025300915201657086611944528317298994959376081297530246971\",\"10057734083972610459557695472359628128485394923403014377687504571662791937025\",\"4904828619307091008204672239231377290495002626534171783829482835985709082773\",\"18694062287284245784028624966421731916526814537891066525886866373016385890569\"]]"
+        }
+      },
+      "0xC97E3DDf40985ac7231FfA33d7abebF88219B5c2": {
+        "id": "ConstantInitialVoiceCreditProxy",
+        "verify": {
+          "args": "[\"99\"]"
+        }
+      },
+      "0x0e1237Cec30874cb167e356F5Fccd85F6d472F99": {
+        "id": "FreeForAllGatekeeper",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xe7632117C2f0247288f1d8155181Eada2a2d585c": {
+        "id": "Verifier",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xDf2146f29D6c736A15575204F57c759a7a166010": {
+        "id": "PoseidonT3",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x0CBaBAfFcD8cEFbE64b8Bf9C1330339183840FcE": {
+        "id": "PoseidonT4",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xDD1780AC3e9FcB815cBfc951dc1cb9827dc7b16B": {
+        "id": "PoseidonT5",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x3C2846DAC729fe2e498A4B4493C2dC0DEbe6d1F8": {
+        "id": "PoseidonT6",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x2c8e38441EadB51A6B05666Fd0EB7455779987c0": {
+        "id": "PollFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x24E5f892eddbC507daEa7713e0c810eF8CE2cAb4": {
+        "id": "MessageProcessorFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x17C684E90DDd8021b2215F4d29B497a134b1b1CE": {
+        "id": "TallyFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xec5798703687a08475821DF5C6017980319FEF72": {
+        "id": "MACI",
+        "verify": {
+          "args": "[\"0x2c8e38441EadB51A6B05666Fd0EB7455779987c0\",\"0x24E5f892eddbC507daEa7713e0c810eF8CE2cAb4\",\"0x17C684E90DDd8021b2215F4d29B497a134b1b1CE\",\"0x0e1237Cec30874cb167e356F5Fccd85F6d472F99\",\"0xC97E3DDf40985ac7231FfA33d7abebF88219B5c2\",10,[\"16015576667038038422103932363190100635991292382181099511410843174865570503661\",\"166510078825589460025300915201657086611944528317298994959376081297530246971\",\"10057734083972610459557695472359628128485394923403014377687504571662791937025\",\"4904828619307091008204672239231377290495002626534171783829482835985709082773\",\"18694062287284245784028624966421731916526814537891066525886866373016385890569\"]]"
+        }
+      },
+      "0x3D2109F54AaDb97b38A3dB937dc2Ef07ED985938": {
+        "id": "VkRegistry",
+        "verify": {
+          "args": "[]"
+        }
+      }
+    },
+    "named": {
+      "ConstantInitialVoiceCreditProxy": {
+        "address": "0xC97E3DDf40985ac7231FfA33d7abebF88219B5c2",
+        "count": 4
+      },
+      "FreeForAllGatekeeper": {
+        "address": "0x0e1237Cec30874cb167e356F5Fccd85F6d472F99",
+        "count": 4
+      },
+      "Verifier": {
+        "address": "0xe7632117C2f0247288f1d8155181Eada2a2d585c",
+        "count": 4
+      },
+      "PoseidonT3": {
+        "address": "0xDf2146f29D6c736A15575204F57c759a7a166010",
+        "count": 4
+      },
+      "PoseidonT4": {
+        "address": "0x0CBaBAfFcD8cEFbE64b8Bf9C1330339183840FcE",
+        "count": 4
+      },
+      "PoseidonT5": {
+        "address": "0xDD1780AC3e9FcB815cBfc951dc1cb9827dc7b16B",
+        "count": 4
+      },
+      "PoseidonT6": {
+        "address": "0x3C2846DAC729fe2e498A4B4493C2dC0DEbe6d1F8",
+        "count": 4
+      },
+      "PollFactory": {
+        "address": "0x2c8e38441EadB51A6B05666Fd0EB7455779987c0",
+        "count": 4
+      },
+      "MessageProcessorFactory": {
+        "address": "0x24E5f892eddbC507daEa7713e0c810eF8CE2cAb4",
+        "count": 4
+      },
+      "TallyFactory": {
+        "address": "0x17C684E90DDd8021b2215F4d29B497a134b1b1CE",
+        "count": 4
+      },
+      "MACI": {
+        "address": "0xec5798703687a08475821DF5C6017980319FEF72",
+        "count": 4
+      },
+      "VkRegistry": {
+        "address": "0x3D2109F54AaDb97b38A3dB937dc2Ef07ED985938",
+        "count": 2
+      }
+    }
+  },
+  "optimismSepolia": {
+    "instance": {
+      "0x5de12f55B17ac66aF1b234863776dB6586b7e666": {
+        "id": "ConstantInitialVoiceCreditProxy",
+        "verify": {
+          "args": "[\"99\"]"
+        }
+      },
+      "0xff4b46A875EEE275dE683f231fc603dd136192D5": {
+        "id": "FreeForAllGatekeeper",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xEc8F6Bc6539F1977752CDa577B9993AC6b1Be4d3": {
+        "id": "Verifier",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x143D3817bD9480486B88F0f367CDa1B764DD021b": {
+        "id": "PoseidonT3",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x8eA23f75Fc42a171a0eBa5b60b6d90bd128E087b": {
+        "id": "PoseidonT4",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x154A11DFFa2712152Fe19dEe290932Ce2637DD5d": {
+        "id": "PoseidonT5",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x09fA752037ffb6FEecb132a402d434Cfa3285D47": {
+        "id": "PoseidonT6",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x2e652Fc5808C45Eedd92F7eA2B321f23666Fa1c6": {
+        "id": "PollFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x7B3372f17DCA2dd7C728D06F036F91FAaf338287": {
+        "id": "MessageProcessorFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x920974FAF2EAADc2b2eEC98fa95b00edd87e9870": {
+        "id": "TallyFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xB2A2e825087a97D552FbD9F917343b24Cb19CD11": {
+        "id": "MACI",
+        "verify": {
+          "args": "[\"0x2e652Fc5808C45Eedd92F7eA2B321f23666Fa1c6\",\"0x7B3372f17DCA2dd7C728D06F036F91FAaf338287\",\"0x920974FAF2EAADc2b2eEC98fa95b00edd87e9870\",\"0xff4b46A875EEE275dE683f231fc603dd136192D5\",\"0x5de12f55B17ac66aF1b234863776dB6586b7e666\",10,[\"16015576667038038422103932363190100635991292382181099511410843174865570503661\",\"166510078825589460025300915201657086611944528317298994959376081297530246971\",\"10057734083972610459557695472359628128485394923403014377687504571662791937025\",\"4904828619307091008204672239231377290495002626534171783829482835985709082773\",\"18694062287284245784028624966421731916526814537891066525886866373016385890569\"]]"
+        }
+      },
+      "0xd60726A9dd9801d8715929FBa015CBEc4D1C8783": {
+        "id": "VkRegistry",
+        "verify": {
+          "args": "[]"
+        }
+      }
+    },
+    "named": {
+      "ConstantInitialVoiceCreditProxy": {
+        "address": "0x5de12f55B17ac66aF1b234863776dB6586b7e666",
+        "count": 1
+      },
+      "FreeForAllGatekeeper": {
+        "address": "0xff4b46A875EEE275dE683f231fc603dd136192D5",
+        "count": 1
+      },
+      "Verifier": {
+        "address": "0xEc8F6Bc6539F1977752CDa577B9993AC6b1Be4d3",
+        "count": 1
+      },
+      "PoseidonT3": {
+        "address": "0x143D3817bD9480486B88F0f367CDa1B764DD021b",
+        "count": 1
+      },
+      "PoseidonT4": {
+        "address": "0x8eA23f75Fc42a171a0eBa5b60b6d90bd128E087b",
+        "count": 1
+      },
+      "PoseidonT5": {
+        "address": "0x154A11DFFa2712152Fe19dEe290932Ce2637DD5d",
+        "count": 1
+      },
+      "PoseidonT6": {
+        "address": "0x09fA752037ffb6FEecb132a402d434Cfa3285D47",
+        "count": 1
+      },
+      "PollFactory": {
+        "address": "0x2e652Fc5808C45Eedd92F7eA2B321f23666Fa1c6",
+        "count": 1
+      },
+      "MessageProcessorFactory": {
+        "address": "0x7B3372f17DCA2dd7C728D06F036F91FAaf338287",
+        "count": 1
+      },
+      "TallyFactory": {
+        "address": "0x920974FAF2EAADc2b2eEC98fa95b00edd87e9870",
+        "count": 1
+      },
+      "MACI": {
+        "address": "0xB2A2e825087a97D552FbD9F917343b24Cb19CD11",
+        "count": 1
+      },
+      "VkRegistry": {
+        "address": "0xd60726A9dd9801d8715929FBa015CBEc4D1C8783",
+        "count": 1
+      }
+    }
+  }
+}
