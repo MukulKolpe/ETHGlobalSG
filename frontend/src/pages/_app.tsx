@@ -1,7 +1,9 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import type { Session } from "next-auth";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
+import { SessionProvider } from "next-auth/react";
 import WagmiProvider from "../utils/wagmiprovider";
 import Footer from "@/components/Footer";
 
@@ -28,23 +30,28 @@ const config = {
 
 const theme = extendTheme({ colors, config });
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppProps) {
   return (
     <>
       <WagmiProvider>
-        <ChakraProvider theme={theme}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              minHeight: "100vh",
-            }}
-          >
-            <Navbar />
-            <Component {...pageProps} />
-            <Footer />
-          </div>
-        </ChakraProvider>
+        <SessionProvider session={session}>
+          <ChakraProvider theme={theme}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                minHeight: "100vh",
+              }}
+            >
+              <Navbar />
+              <Component {...pageProps} />
+              <Footer />
+            </div>
+          </ChakraProvider>
+        </SessionProvider>
       </WagmiProvider>
     </>
   );
