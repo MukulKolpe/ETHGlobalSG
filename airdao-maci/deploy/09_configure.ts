@@ -23,7 +23,7 @@ function fetchOrCreateKeyPair(filePath: string) {
 const deployContracts: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await hre.getNamedAccounts();
 
-  const maci = await hre.ethers.getContract<MACIWrapper>("MACIWrapper", deployer);
+  const maci = await hre.ethers.getContract("DAOManager", deployer);
 
   // update the config on the poll manager
   const verifier = await hre.ethers.getContract<Verifier>("Verifier", deployer);

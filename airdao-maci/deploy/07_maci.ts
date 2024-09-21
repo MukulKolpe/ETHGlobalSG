@@ -18,34 +18,48 @@ const deployContracts: DeployFunction = async function (hre: HardhatRuntimeEnvir
   const tallyFactory = await hre.ethers.getContract("TallyFactory", deployer);
   const emptyBallotRoots = genEmptyBallotRoots(stateTreeDepth);
   console.log("Deployer is", deployer);
+  console.log("PoseidonT3 is", await poseidonT3.getAddress());
+  console.log("PoseidonT4 is", await poseidonT4.getAddress());
+  console.log("PoseidonT5 is", await poseidonT5.getAddress());
+  console.log("PoseidonT6 is", await poseidonT6.getAddress());
+  console.log("InitialVoiceCreditProxy is", await initialVoiceCreditProxy.getAddress());
+  console.log("Gatekeeper is", await gatekeeper.getAddress());
+  console.log("PollFactory is", await pollFactory.getAddress());
+  console.log("MessageProcessorFactory is", await messageProcessorFactory.getAddress());
+  console.log("TallyFactory is", await tallyFactory.getAddress());
 
-  await hre.deployments.deploy("MACIWrapper", {
-    from: deployer,
-    args: [
-      await pollFactory.getAddress(),
-      await messageProcessorFactory.getAddress(),
-      await tallyFactory.getAddress(),
-      await gatekeeper.getAddress(),
-      await initialVoiceCreditProxy.getAddress(),
-      stateTreeDepth,
-      emptyBallotRoots,
-    ],
-    log: true,
-    libraries: {
-      PoseidonT3: await poseidonT3.getAddress(),
-      PoseidonT4: await poseidonT4.getAddress(),
-      PoseidonT5: await poseidonT5.getAddress(),
-      PoseidonT6: await poseidonT6.getAddress(),
-    },
-    autoMine: true,
-  });
+  try {
+    await hre.deployments.deploy("DAOManager", {
+      from: deployer,
+      args: [
+        await pollFactory.getAddress(),
+        await messageProcessorFactory.getAddress(),
+        await tallyFactory.getAddress(),
+        await gatekeeper.getAddress(),
+        await initialVoiceCreditProxy.getAddress(),
+        stateTreeDepth,
+        emptyBallotRoots,
+      ],
+      log: true,
+      libraries: {
+        PoseidonT3: await poseidonT3.getAddress(),
+        PoseidonT4: await poseidonT4.getAddress(),
+        PoseidonT5: await poseidonT5.getAddress(),
+        PoseidonT6: await poseidonT6.getAddress(),
+      },
+      autoMine: true,
+      gasLimit: 30000000,
+    });
 
-  const maci = await hre.ethers.getContract<MACIWrapper>("MACIWrapper", deployer);
+    const maci = await hre.ethers.getContract("DAOManager", deployer);
 
-  console.log(`The MACI contract is deployed at ${await maci.getAddress()}`);
+    console.log(`The DAO Manager MACI contract is deployed at ${await maci.getAddress()}`);
 
-  const tx = await gatekeeper.setMaciInstance(await maci.getAddress());
-  await tx.wait(1);
+    const tx = await gatekeeper.setMaciInstance(await maci.getAddress());
+    await tx.wait(1);
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 export default deployContracts;

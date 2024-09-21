@@ -80,7 +80,7 @@ const config: HardhatUserConfig = {
       optimizer: {
         enabled: true,
         // https://docs.soliditylang.org/en/latest/using-the-compiler.html#optimizer-options
-        runs: 200,
+        runs: 1,
       },
       viaIR: true,
     },
@@ -101,6 +101,7 @@ const config: HardhatUserConfig = {
       //   enabled: process.env.MAINNET_FORKING_ENABLED === "true",
       // },
       loggingEnabled: false,
+      allowUnlimitedContractSize: true,
     },
     mainnet: {
       url: `https://eth-mainnet.alchemyapi.io/v2/${providerApiKey}`,
@@ -177,6 +178,7 @@ const config: HardhatUserConfig = {
     airdao: {
       url: "https://network.ambrosus-test.io",
       accounts: [deployerPrivateKey],
+      allowUnlimitedContractSize: true,
     },
   },
   // configuration for harhdat-verify plugin
