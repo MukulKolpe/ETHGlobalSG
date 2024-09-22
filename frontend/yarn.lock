@@ -3050,6 +3050,37 @@
   dependencies:
     "@zag-js/dom-query" "0.16.0"
 
+"@zk-kit/baby-jubjub@1.0.3", "@zk-kit/baby-jubjub@^1.0.1":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@zk-kit/baby-jubjub/-/baby-jubjub-1.0.3.tgz#8d2eccd20d729f1dbd39203dbff9a245a61dea76"
+  integrity sha512-Wl+QfV6XGOMk1yU2JTqHXeKWfJVXp83is0+dtqfj9wx4wsAPpb+qzYvwAxW5PBx5/Nu71Bh7jp/5vM+6QgHSwA==
+  dependencies:
+    "@zk-kit/utils" "1.2.1"
+
+"@zk-kit/eddsa-poseidon@^1.0.2":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@zk-kit/eddsa-poseidon/-/eddsa-poseidon-1.0.3.tgz#0da41ca6a6888072db7639d8499edf2eb0650d79"
+  integrity sha512-VyTu5jXHDqno3MBDWhoIwGz0vO/HB1X/2wqwope4JRvS4V8S9sYTwH3paf7ynImrJV7L/zK61RHxpGKbNemYRQ==
+  dependencies:
+    "@zk-kit/baby-jubjub" "1.0.3"
+    "@zk-kit/utils" "1.2.1"
+    buffer "6.0.3"
+
+"@zk-kit/poseidon-cipher@^0.3.1":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@zk-kit/poseidon-cipher/-/poseidon-cipher-0.3.2.tgz#a2afcc1e4fcfa9db3b245d584183cd7fb7fcd4ab"
+  integrity sha512-Ezz1e0mj/GRDlHdU5m0uhj5iHY72zWJU0BP8DsCCvPubU7LPI2tVaPpxrAjT4JQqatbVRQHLIhixW7F7BPzaFg==
+  dependencies:
+    "@zk-kit/baby-jubjub" "1.0.3"
+    "@zk-kit/utils" "1.2.1"
+
+"@zk-kit/utils@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@zk-kit/utils/-/utils-1.2.1.tgz#6cb38120535c73ab68cd0f09684882af148f256d"
+  integrity sha512-H2nTsyWdicVOyvqC5AjgU7tsTgmR6PDrruFJNmlmdhKp7RxEia/E1B1swMZjaasYa2QMp4Zc6oB7cWchty7B2Q==
+  dependencies:
+    buffer "^6.0.3"
+
 abitype@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/abitype/-/abitype-0.3.0.tgz#75150e337d88cc0b2423ed0d3fc36935f139d04c"
@@ -3831,7 +3862,7 @@ ethers@^5.7.2:
     "@ethersproject/web" "5.7.1"
     "@ethersproject/wordlists" "5.7.0"
 
-ethers@^6.7.1:
+ethers@^6.13.2, ethers@^6.7.1:
   version "6.13.2"
   resolved "https://registry.yarnpkg.com/ethers/-/ethers-6.13.2.tgz#4b67d4b49e69b59893931a032560999e5e4419fe"
   integrity sha512-9VkriTTed+/27BGuY1s0hf441kqwHJ1wtN2edksEtiRvXx+soxRX3iSXTfFqq2+YwrOqbDoTHjIhQnjJRlzKmg==
@@ -4410,6 +4441,23 @@ lru-cache@^6.0.0:
   integrity sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==
   dependencies:
     yallist "^4.0.0"
+
+maci-crypto@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/maci-crypto/-/maci-crypto-2.2.0.tgz#f8e4b148370664c5f9b93ca1c4260afd2dc7219c"
+  integrity sha512-kSbWfuAdDWOdtQsEyofvgDIdAE//+iRjFdYjluDpvXnk7//x4t+/U4VEQJlE0kJ3TbCVjmsAaGNcbkmwmU977Q==
+  dependencies:
+    "@zk-kit/baby-jubjub" "^1.0.1"
+    "@zk-kit/eddsa-poseidon" "^1.0.2"
+    "@zk-kit/poseidon-cipher" "^0.3.1"
+    ethers "^6.13.2"
+
+maci-domainobjs@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/maci-domainobjs/-/maci-domainobjs-2.2.0.tgz#ca5cdf3580bd606bf0eb1c7a546b61b3a55ce619"
+  integrity sha512-pPHqtdIHaPPvMGmWnmx7zXcXQM5+Q8ZGObeSEXgmH60ZKJTQgdoh5z+hs0TfLWEfoWmwWcetLl94EEfZQj0+vg==
+  dependencies:
+    maci-crypto "^2.2.0"
 
 media-query-parser@^2.0.2:
   version "2.0.2"
