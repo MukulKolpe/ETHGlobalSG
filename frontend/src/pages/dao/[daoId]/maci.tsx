@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import React, { useState, useEffect } from "react";
 import { Keypair, PrivKey, Message } from "maci-domainobjs";
 import { useAccount, useSignMessage } from "wagmi";

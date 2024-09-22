@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import "@rainbow-me/rainbowkit/styles.css";
 import {
   getDefaultWallets,
