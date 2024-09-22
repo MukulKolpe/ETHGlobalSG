@@ -5,6 +5,7 @@ import type { Session } from "next-auth";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import { SessionProvider } from "next-auth/react";
+import Head from "next/head";
 import WagmiProvider from "../utils/wagmiprovider";
 import Footer from "@/components/Footer";
 
@@ -37,6 +38,10 @@ export default function App({
 }: AppProps) {
   return (
     <>
+      <Head>
+        <title>DAOTown</title>
+        <meta name="description" content="Unlocking DAO Potential" />
+      </Head>
       <WagmiProvider>
         <SessionProvider session={session}>
           <ChakraProvider theme={theme}>
