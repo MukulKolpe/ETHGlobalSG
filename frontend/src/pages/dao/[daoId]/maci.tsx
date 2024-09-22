@@ -395,11 +395,8 @@ const DaoPage = () => {
 
   useEffect(() => {
     setSignatureMessage(`Login to ${window.location.origin}`);
+    fetchPolls();
   }, []);
-
-  if (!address) {
-    return <p>Please connect your wallet to continue.</p>;
-  }
 
   if (!daoId) {
     return <p>Loading...</p>;
@@ -422,8 +419,17 @@ const DaoPage = () => {
           </Button>
         )}
 
-        <Button onClick={() => setIsModalOpen(true)} disabled={isLoading}>
+        <Button
+          onClick={() => {
+            setIsModalOpen(true);
+            fetchPolls();
+          }}
+          disabled={isLoading}
+        >
           Create Poll
+        </Button>
+        <Button onClick={fetchPolls} mt={4}>
+          Get Polls
         </Button>
       </VStack>
 
@@ -548,9 +554,6 @@ const DaoPage = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-      <Button onClick={fetchPolls} mt={4}>
-        Get Polls
-      </Button>
 
       {fetchedPolls.length > 0 && (
         <Box mt={8}>
