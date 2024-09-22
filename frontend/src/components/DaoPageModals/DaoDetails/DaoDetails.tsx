@@ -1,5 +1,6 @@
 // @ts-nocheck comment
 import { Button, Heading, Text, Stack, Box } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 export default function DaoDetails({
   daoInfo,
@@ -10,6 +11,7 @@ export default function DaoDetails({
   handleSizeClick1,
   handleSizeClick3,
 }) {
+  const router = useRouter();
   return (
     <Box
       maxW="800px"
@@ -64,6 +66,14 @@ export default function DaoDetails({
           Add Member
         </Button>
       )}
+      <Button
+        mt="2%"
+        m={2}
+        onClick={() => router.push(`/dao/${daoInfo.daoId}/maci`)}
+        colorScheme="teal"
+      >
+        Create Poll using MACI
+      </Button>
     </Box>
   );
 }
