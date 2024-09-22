@@ -93,29 +93,40 @@ const DaosCard = ({
   };
 
   const joinDao = async () => {
-    if (window.ethereum._state.accounts.length !== 0) {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const signer = provider.getSigner();
-      const contract = new ethers.Contract(
-        process.env.NEXT_PUBLIC_DAOMANAGER_ADDRESS,
-        daomanagerabi,
-        signer
-      );
-      const accounts = await provider.listAccounts();
-      const tx = await contract.joinDao(daoId, accounts[0]);
-      await tx.wait();
+    try {
+      if (window.ethereum._state.accounts.length !== 0) {
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(
+          process.env.NEXT_PUBLIC_DAOMANAGER_ADDRESS,
+          daomanagerabi,
+          signer
+        );
+        const accounts = await provider.listAccounts();
+        const tx = await contract.joinDao(daoId, accounts[0]);
+        await tx.wait();
 
+        toast({
+          title: "Congratulations!",
+          description:
+            "You have successfully joined the DAO. Pls wait while we add you to the private DAO Discord channel",
+          status: "info",
+          duration: 5000,
+          isClosable: true,
+        });
+
+        //Add user to discord channel
+        await joinDiscord({ userId: userId, channelId: channel });
+      }
+    } catch (error) {
       toast({
-        title: "Congratulations!",
+        title: "Sorry!",
         description:
-          "You have successfully joined the DAO. Pls wait while we add you to the private DAO Discord channel",
+          "You don't meet required token requirements to join this DAO",
         status: "info",
         duration: 5000,
         isClosable: true,
       });
-
-      //Add user to discord channel
-      await joinDiscord({ userId: userId, channelId: channel });
     }
   };
   return (
